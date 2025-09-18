@@ -1,0 +1,23 @@
+def prime(n):
+    if n < 2:
+        return False
+    for j in range(2, int(n**0.5) + 1):
+        if n % j == 0:
+            return False
+    return True
+def sum_of_digits(i):
+    digits = [int(j) for j in str(i)]
+    return sum(digits)
+
+def all_digits_prime(i):
+    while i != 0:
+        d = i % 10
+        if not prime(d):
+            return False
+        i //= 10
+    return True
+start = int(input("Enter start of range: "))
+end = int(input("Enter end of range: "))
+for num in range(start, end + 1):
+    if prime(num) and prime(sum_of_digits(num)) and all_digits_prime(num):
+        print(num)
