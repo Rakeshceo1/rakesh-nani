@@ -1,0 +1,45 @@
+class rectangle :
+    color="Red"
+    def set_dim(self,l,b):
+        self.l=l
+        self.b=b
+    def area(self):
+        return self.l*self.b
+    def per(self):
+        return (2*(self.l*self.b))
+    def category(self):
+        if(self.area()<500):
+            print("Small")
+        elif(self.area()>500 and self.area()<1000):
+            print("Medium")
+        else:
+            print("Big")
+    def display(self):
+        print("color:",self.color)
+        print("Area:",self.area())
+        print("Perimeter:",self.per())
+        print("Category:",self.category())
+
+r1=rectangle()
+r2=rectangle()
+r3=rectangle()
+
+l=10
+b=20
+r1.set_dim(l,b)
+r2.set_dim(l+10,b+20)
+r3.set_dim(l+20,b+20)
+
+r1.display()
+print("-----------------------")
+r2.display()
+print("----------------------")
+r3.display()
+print("------------------------")
+        
+        
+        
+        
+        
+        
+        
